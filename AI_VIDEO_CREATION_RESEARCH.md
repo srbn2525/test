@@ -52,13 +52,16 @@
 - 参考: [Runway](https://runwayml.com/) / [比較記事](https://invideo.io/blog/kling-vs-sora-vs-veo-vs-runway/)
 
 ### 3. OpenAI Sora 2（クラウド型 / おすすめ度: ★★★★☆）
-- **特徴**: 単一人物の顔リアリズムで最高峰、「Identity Lock」機能
-- **顔の一貫性**: 数千フレームにわたり人物の顔を維持
+- **特徴**: 単一人物の顔リアリズムで最高峰、「Characters」機能（旧Cameos）
+- **顔の一貫性**: 95%+の一貫性。iOSアプリで本人が3〜10秒の動画を撮影して登録
+- **⚠️ 重要な制限**: 本人がSoraアプリで自撮り録画する必要あり。他人の写真アップロードは不可。1動画あたり最大2キャラクターまで
+- **動画長**: Plus: 5秒(720p) / Pro: 最大20秒(1080p) / API: 最大25秒
 - **料金**:
-  - ChatGPT Plus: $20/月（制限あり、480p）
-  - ChatGPT Pro: $200/月（拡張アクセス）
-- **PV/ドラマ向き度**: ○（リアリズムは最高だが、マルチショット機能は他に劣る）
-- 参考: [比較記事](https://www.imagine.art/blogs/veo-3-vs-top-ai-video-generators)
+  - ChatGPT Plus: $20/月（制限あり、480p〜720p）
+  - ChatGPT Pro: $200/月（拡張アクセス、1080p）
+  - API: $0.10〜$0.50/秒
+- **PV/ドラマ向き度**: ○（リアリズムは最高だが、本人録画が必須なのがネック）
+- 参考: [Sora 2ガイド](https://wavespeed.ai/blog/posts/openai-sora-2-complete-guide-2026/) / [比較記事](https://www.imagine.art/blogs/veo-3-vs-top-ai-video-generators)
 
 ### 4. Google Veo 3.1（クラウド型 / おすすめ度: ★★★★☆）
 - **特徴**: リップシンク・ボディランゲージで最強、参照画像4枚で顔の一貫性維持
@@ -84,6 +87,26 @@
   - Pro: $99/月
 - **PV/ドラマ向き度**: △（プレゼン・説明動画向き、PV/ドラマには向かない）
 - 参考: [HeyGen](https://www.heygen.com/) / [レビュー](https://aitoolanalysis.com/heygen-review/)
+
+### 7. Minimax / Hailuo AI（クラウド型 / おすすめ度: ★★★★☆）
+- **特徴**: キャラクターの微表情（唇の震え、目を細める等）が優秀。1080pネイティブ
+- **顔の一貫性**: フレーム間の顔・服装・背景の一貫性が高い
+- **動画長**: 6〜8秒/クリップ
+- **料金**:
+  - Standard: $9.99/月（1,000クレジット）
+  - Unlimited: $94.99/月
+- **PV/ドラマ向き度**: ◎（キャラクター主導のシネマティック映像に強い）
+- 参考: [MiniMax Hailuo 2.3](https://www.minimax.io/news/minimax-hailuo-23)
+
+### 8. Vidu Q3（Shengshu Technology）（クラウド型 / おすすめ度: ★★★☆☆）
+- **特徴**: 連続コンテンツ（シリーズもの）特化。最大7枚の参照画像で複数キャラ管理
+- **顔の一貫性**: 構造化されたサブジェクトライブラリでモジュラーにアセット再利用
+- **料金**:
+  - Free: 800クレジット
+  - Standard: $10/月 / Creator: $15/月
+  - API: 約$0.0375/秒（最安クラス）
+- **PV/ドラマ向き度**: ○（シリーズものに特化、単発PVなら他ツールの方が良い）
+- 参考: [Vidu SXSW 2026発表](https://www.manilatimes.net/2026/03/16/tmt-newswire/pr-newswire/vidu-unveils-the-worlds-first-ai-solution-for-animated-series-production-at-sxsw-2026/2300902)
 
 ### ツール比較まとめ
 
@@ -118,6 +141,15 @@
 | **解像度** | 512×512 or 1024×1024 | リサイズ・背景除去が必要 |
 | **動画クリップ** | あれば10〜30本 | 動きのパターン学習用 |
 | **キャプション** | 各画像にタグ付け | WD14 Taggerで自動生成可 |
+
+### 音声クローンツール
+
+| ツール | 必要な音声量 | 特徴 | 料金 |
+|---|---|---|---|
+| **ElevenLabs** | 1〜5分 | 英語の忠実度が業界最高 | $5〜99/月 |
+| **Fish Audio** | 10秒以上 | TTS-Arena 1位、多言語対応 | $9.99/月〜 |
+| **Resemble AI** | 10秒 | ElevenLabsの1/3の価格、セルフホスト可 | 低価格 |
+| **Chatterbox（OSS）** | 5秒 | MITライセンス、ブラインドテストでElevenLabsに勝利 | 無料 |
 
 ### 写真撮影のコツ
 - 屋内外の異なるロケーションで撮影
